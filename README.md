@@ -41,17 +41,20 @@ Generate a title, sort key, and URL from a given set of webpage information, lik
 ## Edge Cases Handled
 
 * URL Generation
-** Replace all white-space with a single dash.
-** Strip commas.
-** Do not repeat any dashes more than once.
-** Do not allow dashes to begin or end the URL.
-** Lowercase everything.
-** Trans-Romanize text, i.e., "Ōsugi Sakae" becomes "Osugi Sakae".
+
+  * Replace all white-space with a single dash.
+  * Strip commas.
+  * Do not repeat any dashes more than once.
+  * Do not allow dashes to begin or end the URL.
+  * Lowercase everything.
+  * Trans-Romanize text, i.e., "Ōsugi Sakae" becomes "Osugi Sakae".
 
 * List Title Generation
-** Break up the title by the ":", "-", and "--" characters, and if any piece begins with "A", "An", or "The", remove that piece and prepend it to the end with a comma.  I.E. "A Way Cool Story: The Details" becomes "Way Cool Story, A: Details, The".
+
+  * Break up the title by the ":", "-", and "--" characters, and if any piece begins with "A", "An", or "The", remove that piece and prepend it to the end with a comma.  I.E. "A Way Cool Story: The Details" becomes "Way Cool Story, A: Details, The".
 
 * List Title Key Generation
-** Remove all apostrophes and quotes, so that quoted text and non-quoted text sort accordingly.
-** Left string-pad all numbers with "0" up to ten characters, so that dates sort properly, i.e., 53 AD, 500 AD, and 1900 AD would sort incorrectly otherwise.
-** Trans-Romanize text, i.e., "Ōsugi Sakae" becomes "Osugi Sakae".
+
+  * Remove all apostrophes and quotes, so that quoted text and non-quoted text sort accordingly.
+  * Left string-pad all numbers with "0" up to ten characters, so that dates sort properly, i.e., 53 AD, 500 AD, and 1900 AD would sort incorrectly otherwise.
+  * Trans-Romanize text, i.e., "Ōsugi Sakae" becomes "Osugi Sakae".
