@@ -229,6 +229,7 @@
 			
 			for($i = 0; $i < count($values); $i++) {
 				$value = $values[$i];
+				$value = str_replace(['—', '–'], '-', $value);
 				
 				$generate_value_code = $this->GenerateURLCodeFromValue([
 					'value'=>$value,
