@@ -34,9 +34,31 @@ Generate a title, sort key, and URL from a given set of webpage information, lik
 	    [ListTitleSortKey] => Best Blog In the World, The: Inside Look in 0000002000, An
 	)
 
+## Sample Outputs
+
+  Input:
+
+	'Title'=>'The Best Blog In the World - Says ME!',
+	'Subtitle'=>'An "Inside" Look in 2000',
+	'Description'=>'',
+	'tags'=>[
+		'awesome',
+		'best',
+		'viral',
+	],
+    
+  Output:
+
+	Array
+	(
+	    [url] => the-best-blog-in-the-world-says-me-an-inside-look-in-2000-awesome-best
+	    [ListTitle] => Best Blog In the World, The - Says ME!: "Inside" Look in 2000, An
+	    [ListTitleSortKey] => Best Blog In the World, The - Says ME!: Inside Look in 0000002000, An
+	)
+
 ## Demo
 
-***See a full working Demo Online Here:*** [Full Working Demo](https://3v4l.org/MgLEG)
+***See a full working Demo Online Here:*** [Full Working Demo](https://3v4l.org/fA2ui)
 
 ## Edge Cases Handled
 
