@@ -272,10 +272,12 @@
 				if($current_length === $max_length) {
 					$i = count($new_value_pieces);
 				} elseif($current_length < $max_length) {
-					$formatted_piece = preg_replace('/[\x{0300}-\x{036f}]/u','',normalizer_normalize($new_value_piece, Normalizer::FORM_D));
-					if((strlen($formatted_piece) + $current_length + 1) <= $max_length) {
-						$pieces[] = $formatted_piece;
-						$current_length += strlen($formatted_piece) + 1;
+					if($new_value_piece !== '-') {
+						$formatted_piece = preg_replace('/[\x{0300}-\x{036f}]/u','',normalizer_normalize($new_value_piece, Normalizer::FORM_D));
+						if((strlen($formatted_piece) + $current_length + 1) <= $max_length) {
+							$pieces[] = $formatted_piece;
+							$current_length += strlen($formatted_piece) + 1;
+						}
 					}
 				}
 			}
